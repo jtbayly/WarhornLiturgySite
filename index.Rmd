@@ -8,7 +8,7 @@ documentclass: book
 bibliography: [book.bib, packages.bib]
 biblio-style: apalike
 link-citations: yes
-github-repo: rstudio/bookdown-demo
+github-repo: jtbayly/WarhornLiturgySite
 description: "This site is a resource for planning worship services, providing lists of various elements as a quick reference."
 ---
 
