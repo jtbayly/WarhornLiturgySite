@@ -14,7 +14,7 @@ description: "This site is a resource for planning worship services, providing l
 
 # Liturgy {-}
 
-This site is a resource for planning worship services, providing lists of various elements as a quick reference. v1
+This site is a resource for planning worship services, providing lists of various elements as a quick reference. v2
 
 The word "liturgy" can sound intimidating, but it is merely a composite Greek word meaning public work or duty. In Christian use, liturgy refers to the public service of God’s people. Thus, it consists of whatever actions we perform together to express our devotion to the Lord.
 
