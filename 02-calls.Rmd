@@ -2,8 +2,8 @@
 
 God alone is the author of worship. Worship is not man's invention, but rather the natural function of his nature as an image bearing creature (Genesis 1:26). We are worshippers; God made us for this purpose. As the first question of the Westminster Shorter Catechism teaches:
 
-Q. 1. What is the chief end of man? 
-A. Man's chief end is to glorify God, and to enjoy Him forever.
+  Q. 1. What is the chief end of man? 
+  A. Man's chief end is to glorify God, and to enjoy Him forever.
 
 The question is not, therefore, "Are we worshipping?" But, "Who are we worshipping?" 
 
@@ -13,7 +13,7 @@ Since God is both the author and only proper object of worship, and since restor
 
 These calls to worship—found everywhere in Scripture, but most especially the Psalms—are typically recited at the beginning of worship to remind us of our duty to worship God alone, to wake us up from spiritual slumber, and to refocus our minds on His character and attributes. 
 
-You will find here a growing collection of Scriptural calls to worship. These have been arranged by calls recited by the [pastor (or elder)](#From the Pastor) alone, and calls recited [responsively between pastor and people](#Responsive Calls). 
+You will find here a growing collection of Scriptural calls to worship. These have been arranged by calls recited by the [pastor (or elder)](#From-the-Pastor) alone, and calls recited [responsively between pastor and people](#Responsive-Calls). 
 
 
 ## From the Pastor {-}
@@ -115,7 +115,7 @@ Pastor: Both riches and honor come from You, and You rule over all, and in Your 
 
 Congregation: Now therefore, our God, we thank You, and praise Your glorious name.
 
-| 1 Chronicles 29:10b-13 |
+--- | 1 Chronicles 29:10b-13 |
 
 ---
 
@@ -127,7 +127,7 @@ Pastor: I was crying to the Lord with my voice, And He answered me from His holy
  
 All: Arise, O Lord; save me, O my God! For You have smitten all my enemies on the cheek; You have shattered the teeth of the wicked. Salvation belongs to the Lord; Your blessing be upon Your people! 
  
-| Psalm 3 |
+--- | Psalm 3 |
 
 ---
 
