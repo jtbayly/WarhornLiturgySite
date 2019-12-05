@@ -16,7 +16,7 @@ gitbook.require(["gitbook", "jQuery"], function(gitbook, $) {
       return;
     }
 
-    $(copyButton).prependTo("div.blockquote");
+    $(copyButton).prependTo("div.sourceCode");
 
     clipboard = new ClipboardJS(".copy-to-clipboard-button", {
       text: function(trigger) {
