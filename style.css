@@ -18,3 +18,9 @@ blockquote > p:last-child {
 blockquote > p:first-child {
   text-align: inherit;
 }
+blockquote {
+  position: relative;
+}
+blockquote:hover > .copy-to-clipboard-button {
+  visibility: visible;
+}
