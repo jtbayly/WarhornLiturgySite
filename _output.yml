@@ -3,6 +3,7 @@ bookdown::gitbook:
   config:
     toc:
       before: |
+        <a href="https://www.warhornmedia.com/"><img src="images/warhornlogo.png" width="280"></a>
         <li><a href="./">A Liturgy Resource - Warhorn Media</a></li>
       after: |
         <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
