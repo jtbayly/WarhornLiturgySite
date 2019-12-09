@@ -1,3 +1,6 @@
+\PassOptionsToPackage{unicode=true}{hyperref} % options for packages loaded elsewhere
+\PassOptionsToPackage{hyphens}{url}
+%
 \documentclass[]{book}
 \usepackage{lmodern}
 \usepackage{amssymb,amsmath}
@@ -6,31 +9,34 @@
 \ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provides euro and other symbols
 \else % if luatex or xelatex
-  \ifxetex
-    \usepackage{mathspec}
-  \else
-    \usepackage{fontspec}
-  \fi
+  \usepackage{unicode-math}
   \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
 \fi
 % use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
 % use microtype if available
 \IfFileExists{microtype.sty}{%
-\usepackage{microtype}
+\usepackage[]{microtype}
 \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
 }{}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
 \usepackage{hyperref}
-\hypersetup{unicode=true,
+\hypersetup{
             pdftitle={A Liturgy Resource from Warhorn Media},
             pdfauthor={Warhorn Media},
             pdfborder={0 0 0},
             breaklinks=true}
 \urlstyle{same}  % don't use monospace font for urls
-\usepackage{natbib}
-\bibliographystyle{apalike}
 \usepackage{longtable,booktabs}
+% Fix footnotes in tables (requires footnote package)
+\IfFileExists{footnote.sty}{\usepackage{footnote}\makesavenoteenv{longtable}}{}
 \usepackage{graphicx,grffile}
 \makeatletter
 \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
@@ -40,12 +46,6 @@
 % margins by default, and it is still possible to overwrite the defaults
 % using explicit options in \includegraphics[width, height, ...]{}
 \setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
-\IfFileExists{parskip.sty}{%
-\usepackage{parskip}
-}{% else
-\setlength{\parindent}{0pt}
-\setlength{\parskip}{6pt plus 2pt minus 1pt}
-}
 \setlength{\emergencystretch}{3em}  % prevent overfull lines
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
@@ -60,32 +60,17 @@
 \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
 \fi
 
-%%% Use protect on footnotes to avoid problems with footnotes in titles
-\let\rmarkdownfootnote\footnote%
-\def\footnote{\protect\rmarkdownfootnote}
+% set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
 
-%%% Change title format to be more compact
-\usepackage{titling}
-
-% Create subtitle command for use in maketitle
-\providecommand{\subtitle}[1]{
-  \posttitle{
-    \begin{center}\large#1\end{center}
-    }
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
 }
-
-\setlength{\droptitle}{-2em}
-
-  \title{A Liturgy Resource from Warhorn Media}
-    \pretitle{\vspace{\droptitle}\centering\huge}
-  \posttitle{\par}
-    \author{Warhorn Media}
-    \preauthor{\centering\large\emph}
-  \postauthor{\par}
-      \predate{\centering\large\emph}
-  \postdate{\par}
-    \date{2019-12-04}
-
+\makeatother
 \usepackage{booktabs}
 \usepackage{amsthm}
 \makeatletter
@@ -94,6 +79,28 @@
   \thm@postskip=\thm@preskip
 }
 \makeatother
+% https://github.com/rstudio/rmarkdown/issues/337
+\let\rmarkdownfootnote\footnote%
+\def\footnote{\protect\rmarkdownfootnote}
+
+% https://github.com/rstudio/rmarkdown/pull/252
+\usepackage{titling}
+\setlength{\droptitle}{-2em}
+
+\pretitle{\vspace{\droptitle}\centering\huge}
+\posttitle{\par}
+
+\preauthor{\centering\large\emph}
+\postauthor{\par}
+
+\predate{\centering\large\emph}
+\postdate{\par}
+\usepackage[]{natbib}
+\bibliographystyle{apalike}
+
+\title{A Liturgy Resource from Warhorn Media}
+\author{Warhorn Media}
+\date{2019-12-09}
 
 \begin{document}
 \maketitle
@@ -106,7 +113,7 @@
 \chapter*{Liturgy}\label{liturgy}}
 \addcontentsline{toc}{chapter}{Liturgy}
 
-This site is a resource for planning worship services, providing lists of various elements as a quick reference. v2
+This site is a resource for planning worship services, providing lists of various elements as a quick reference.
 
 The word ``liturgy'' can sound intimidating, but it is merely a composite Greek word meaning public work or duty. In Christian use, liturgy refers to the public service of God's people. Thus, it consists of whatever actions we perform together to express our devotion to the Lord.
 
@@ -163,15 +170,9 @@ These calls to worship---found everywhere in Scripture, but most especially the 
 You will find here a growing collection of Scriptural calls to worship. These have been arranged by calls recited by the \protect\hyperlink{from-the-fastor}{pastor (or elder)} alone, and calls recited \protect\hyperlink{responsive-calls}{responsively between pastor and people}.
 
 \hypertarget{from-the-pastor}{%
-\section*{From the Pastor}\label{from-the-pastor}}
-\addcontentsline{toc}{section}{From the Pastor}
+\section{From the Pastor}\label{from-the-pastor}}
 
-\begin{FOO}
-Sing praise to the LORD, you His godly ones, and give thanks to His holy
-name. For His anger is but for a moment, His favor is for a lifetime;
-Weeping may last for the night, but a shout of joy comes in the morning.
-\textbar{} Psalm 30:4-5
-\end{FOO}
+Sing praise to the LORD, you His godly ones, and give thanks to His holy name. For His anger is but for a moment, His favor is for a lifetime; Weeping may last for the night, but a shout of joy comes in the morning. \textbar{} Psalm 30:4-5
 
 \begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
 
@@ -181,7 +182,9 @@ His praise shall continually be in my mouth.\\
 My soul will make its boast in the Lord;\\
 The humble will hear it and rejoice.\\
 O magnify the Lord with me,\\
-And let us exalt His name together. \textbar{} Psalm 34:1-3
+And let us exalt His name together.
+
+--- Psalm 34:1-3
 \end{quote}
 
 \begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
@@ -220,11 +223,13 @@ Oh give thanks to the LORD, call upon His name; Make known His deeds among the p
 
 \begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
 
+\begin{verbatim}
 Praise the Lord, all nations;
 Laud Him, all peoples!
 For His lovingkindness is great toward us,
 And the truth of the Lord is everlasting.
-Praise the Lord! \textbar{} Psalm 117
+Praise the Lord! | Psalm 117
+\end{verbatim}
 
 \begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
 
@@ -633,7 +638,11 @@ Philip J. Moyer
 
 We have finished a nice book.
 
-\bibliography{book.bib,packages.bib}
+\hypertarget{sdkjfajlasdjkfhl}{%
+\chapter{sdkjfajlasdjkfhl}\label{sdkjfajlasdjkfhl}}
 
+some text
+
+\bibliography{book.bib,packages.bib}
 
 \end{document}
