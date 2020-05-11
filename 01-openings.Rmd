@@ -1,6 +1,8 @@
 # Opening Sentences {-}
 
-Opening sentences are a simple declaration to the congregation, taken from scripture, to open the 
+Opening sentences are a simple declaration to the congregation, taken from scripture, to open the service with a reminder of why we are gathered together.
+
+## Examples
 
 > Our help is in the name of the LORD, Who made heaven and earth.
 > 
@@ -19,6 +21,6 @@ Opening sentences are a simple declaration to the congregation, taken from scrip
 
 - Let the words of my mouth, and the meditation of my heart, be acceptable in thy sight, O LORD, my strength, and my redeemer. | Psalm 19:15
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMDk2MzE5MTYsLTE5MzM1Nzc1MzddfQ
+eyJoaXN0b3J5IjpbLTE2ODA2NjI0NzYsLTE5MzM1Nzc1MzddfQ
 ==
 -->
